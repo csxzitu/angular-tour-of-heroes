@@ -1,4 +1,5 @@
 <h2>My Heroes</h2>
+
 <div>
   <label for="new-hero">Hero name: </label>
   <input id="new-hero" #heroName />
@@ -8,3 +9,11 @@
     Add hero
   </button>
 </div>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+    </li>
+  </ul>
